@@ -1,6 +1,6 @@
-+---
-+layout: post
-+title: What is devStory?
-+---
-+
-+So it begins.
+---
+layout: post
+title: What is devStory?
+---
+
+So it begins.
