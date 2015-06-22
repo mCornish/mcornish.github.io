@@ -14,13 +14,15 @@
 /**************/
 
 html {
-  font-size: 100%;
+  font-size: 18px;
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $white;
+  font-family: $merriweather-sans;
+  font-size: 1rem;
   color: $darkGray;
+  line-height: 1.48;
 }
 
 .container {
@@ -31,12 +33,12 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $merriweather;
   color: $darkerGray;
   font-weight: bold;
 
   line-height: 1.7;
-  margin: 1em 0 15px;
+  margin: 2em 0 .5em;
   padding: 0;
 
   @include mobile {
@@ -45,18 +47,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 1.5rem;
   a {
     color: inherit;
   }
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 1.2rem;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 h4 {
@@ -65,7 +67,10 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 1em 0;
+}
+h2 + p {
+  margin-top: 0;
 }
 
 a {
@@ -110,14 +115,27 @@ img {
   max-width: 100%;
 }
 
+.logo {
+  font-family: "Courier";
+}
+.logo::after {
+  content: '|';
+  @include animation(blink 1.2s ease infinite);
+}
+
+.about {
+  font-family: "Courier";
+}
+
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
 }
 
 .date {
-  font-style: italic;
-  color: $gray;
+  font-weight: 100;
+  font-size: 1em;
+  margin: .2em 0;
 }
 
 // Specify the color of the selection
@@ -156,7 +174,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  //border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -269,6 +287,13 @@ nav {
     text-transform: uppercase;
     font-size: 15px;
   }
+}
+.post__header {
+  margin-top: 0;
+}
+.post--page p:first-child:first-letter {
+  font-size: 3em;
+  font-family: "Courier";
 }
 
 .wrapper-footer {
